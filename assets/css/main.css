@@ -1,0 +1,57 @@
+@font-face {
+  font-family: MyriadPro;
+  src: url('../fonts/MyriadPro-Black.otf');
+  font-weight: 800;
+}
+@font-face {
+  font-family: MyriadPro;
+  src: url('../fonts/MyriadPro-Bold.otf');
+  font-weight: 700;
+}
+@font-face {
+  font-family: MyriadPro;
+  src: url('../fonts/MyriadPro-Light.otf');
+  font-weight: 500;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+html, body {
+  height: 100%;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  font-family: MyriadPro, sans-serif;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+#root, #__nuxt {
+  isolation: isolate;
+}
+
+.\? {
+  outline: 1.5px solid red;
+}
+
+
+.new-border-gray {
+  -webkit-box-shadow: 2px 2px 0px 0px #636363;
+  -moz-box-shadow: 2px 2px 0px 0px #636363;
+  box-shadow: 2px 2px 0px 0px #636363;
+}
+
+
+
