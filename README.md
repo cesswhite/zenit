@@ -1,42 +1,33 @@
-# Nuxt 3 Minimal Starter
+# Prueba técnica Zenit MX
 
-Look at the [nuxt 3 documentation](https://v3.nuxtjs.org) to learn more.
-
+Repositorio que contiene la prueba técnica para Zenit, realizada por César A. López Lozano
+[Website Prueba Deployed](https://zenit-mx.netlify.app/)
+[Mi website](https://cesswhite.com/)
 ## Setup
 
-Make sure to install the dependencies:
+Install the dependencies:
 
 ```bash
-# yarn
 yarn install
 
-# npm
-npm install
-
-# pnpm
-pnpm install --shamefully-hoist
 ```
-
-## Development Server
 
 Start the development server on http://localhost:3000
 
 ```bash
-npm run dev
+yarn run dev -o
 ```
-
-## Production
 
 Build the application for production:
 
 ```bash
-npm run build
+yarn run build
 ```
 
 Locally preview production build:
 
 ```bash
-npm run preview
+yarn run preview
 ```
 
 Checkout the [deployment documentation](https://v3.nuxtjs.org/guide/deploy/presets) for more information.

@@ -9,8 +9,8 @@
       </p>
       <div class="flex gap-2">
         <template v-for="shape, index in shapes" :key="index">
-          <button ref="shape_button" @click.prevent="verifyShape(shape, index)">
-            <img width="80" height="80" :src="`/${shape}.svg`" alt="">
+          <button class="rounded-lg px-2 hover:bg-dark-100" @click.prevent="verifyShape(shape, index, $event)">
+            <img width="80" height="80" class="rounded-md" :src="`/${shape}.svg`" alt="">
           </button>
         </template>
       </div>
@@ -19,22 +19,20 @@
 </template>
 
 
-<script setup lang="ts">
-const shape_button = ref<HTMLButtonElement>();
+<script setup>
 const randomNum = ref(0);
 const shapes = ['triangulo', 'rectangulo', 'circulo', 'estrella']
-
 const emit = defineEmits(['getShape'])
-
 onMounted(() => {
   randomNum.value = Math.floor(Math.random() * 3)
 })
 
-function verifyShape(shape: string, index: any) {
+function verifyShape (shape, index, event) {
   if (shape === shapes[randomNum.value]) {
+    event.target.classList.add('bg-green-500')
     emit('getShape', shape)
   } else {
-    console.log('Not shape', shape_button.value, index)
+    event.target.classList.remove('bg-green-500')
   }
 }
 </script>
